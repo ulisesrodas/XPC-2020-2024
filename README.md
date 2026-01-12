@@ -38,6 +38,9 @@ Este repositorio contiene el flujo completo de Data science:
 | `XPC-2020-2024.qmd` | **Código Fuente del dashboard:** Script en Quarto que genera la interfaz visual y la lógica del servidor (Shiny). |
 | `CONSOLIDADOXPC_2020_2024.csv` | **Data procesada:** Base de datos final lista para el consumo del dashboard. |
 
+## 👀 A considerar
+Para la reproducibilidad, después de descargar los archivos cambiar el setwd del script de R a la carpeta de su preferencia.
+
 ## 👨‍💻 Autor
 **Ulises Rodas**
 * Sociólogo (UNMSM) & estudiante de Ciencia de datos.
