@@ -4,8 +4,13 @@ Este proyecto presenta un análisis exploratorio sobre la recuperación económi
 
 🚀 **[VER DASHBOARD INTERACTIVO:](https://ulisesrodas.shinyapps.io/XPC-2020-2024/)**
 
-## 🎯 Objetivo
-Identificar disparidades económicas y evaluar la capacidad de recuperación del gasto e ingreso familiar en los años recientes (2020, 2022, 2024), proporcionando una herramienta interactiva para la toma de decisiones basada en evidencia.
+## 🔍 Principales Hallazgos
+Gracias a la visualización interactiva, se pudieron identificar patrones clave en la recuperación económica:
+
+* **Disparidad Regional:** La costa (especialmente **Moquegua**, **Arequipa** e **Ica**) mantiene consistentemente los niveles más altos de ingreso y gasto per cápita, superando incluso a Lima Metropolitana.
+* **Brecha Sierra/Selva:** Se evidencia una brecha persistente en departamentos de la Sierra y Selva (como **Puno**, **Loreto** y **Huancavelica**), cuya recuperación post-pandemia ha sido más lenta en términos monetarios.
+* **Tendencia de Recuperación:** Al comparar 2020 vs 2024, se observa un repunte generalizado en los ingresos nominales, aunque la capacidad de gasto muestra variaciones heterogéneas según la región.
+* * **Caso Madre de Dios:** Es llamativo que esté muy arriba en el ranking. Es un hallazgo interesante que puede estar ligado al auge de la  minería ilegal en la zona. Se necesita más investigación al respecto.
 
 ## ℹ️ Fuente de datos (origen)
 Los datos brutos fueron obtenidos del portal oficial de **[Microdatos del INEI](https://proyectos.inei.gob.pe/microdatos/index.htm)** siguiendo esta ruta:
