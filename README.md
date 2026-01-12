@@ -7,9 +7,8 @@ Este proyecto presenta un análisis exploratorio sobre la recuperación económi
 ## 🔍 Principales Hallazgos
 Gracias a la visualización interactiva, se pudieron identificar patrones clave en la recuperación económica:
 
-* **Disparidad Regional:** La costa (especialmente **Moquegua**, **Arequipa** e **Ica**) mantiene consistentemente los niveles más altos de ingreso y gasto per cápita, superando incluso a Lima Metropolitana.
-* **Brecha Sierra/Selva:** Se evidencia una brecha persistente en departamentos de la Sierra y Selva (como **Puno**, **Loreto** y **Huancavelica**), cuya recuperación post-pandemia ha sido más lenta en términos monetarios.
-* **Tendencia de Recuperación:** Al comparar 2020 vs 2024, se observa un repunte generalizado en los ingresos nominales, aunque la capacidad de gasto muestra variaciones heterogéneas según la región.
+* **Brecha sierra/selva:** Se evidencia una brecha persistente en departamentos de la Sierra y Selva (como **Puno**, **Loreto** y **Huancavelica**) vs la Costa, cuya recuperación post-pandemia ha sido más lenta en términos monetarios.
+* **Tendencia de recuperación:** Al comparar 2020 vs 2024, se observa un repunte generalizado en los ingresos nominales, aunque la capacidad de gasto muestra variaciones heterogéneas según la región.
 * * **Caso Madre de Dios:** Es llamativo que esté muy arriba en el ranking. Es un hallazgo interesante que puede estar ligado al auge de la  minería ilegal en la zona. Se necesita más investigación al respecto.
 
 ## ℹ️ Fuente de datos (origen)
