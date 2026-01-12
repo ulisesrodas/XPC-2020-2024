@@ -11,6 +11,8 @@ Gracias a la visualización interactiva, se pudieron identificar patrones clave 
 * **Tendencia de recuperación:** Al comparar 2020 vs 2024, se observa un repunte generalizado en los ingresos nominales, aunque la capacidad de gasto muestra variaciones heterogéneas según la región.
 * * **Caso Madre de Dios:** Es llamativo que esté muy arriba en el ranking. Es un hallazgo interesante que puede estar ligado al auge de la  minería ilegal en la zona. Se necesita más investigación al respecto.
 
+<img width="1609" height="865" alt="image" src="https://github.com/user-attachments/assets/bdd7c566-bbfc-4208-b2b8-2a386cdf2d66" />
+
 ## ℹ️ Fuente de datos (origen)
 Los datos brutos fueron obtenidos del portal oficial de **[Microdatos del INEI](https://proyectos.inei.gob.pe/microdatos/index.htm)** siguiendo esta ruta:
 1.  **Encuesta:** ENAHO Metodología ACTUALIZADA.
