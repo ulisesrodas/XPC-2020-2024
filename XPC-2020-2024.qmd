@@ -1,0 +1,116 @@
+---
+title: "Situación del Perú"
+author: "Ulises Rodas"
+format: dashboard
+server: shiny
+---
+
+```{r}
+#| context: setup # La parte para cargar los datos, setup global
+library(tidyverse)
+library(plotly)
+library(shiny)
+sumaria202x <- read.csv("CONSOLIDADOXPC_2020_2024.csv") # No warnings
+sumaria202x <- sumaria202x |>
+  mutate(
+    AÑO = as.character(AÑO), # Asegurar que AÑO sea caracter
+    Region = case_when(
+      DPTO %in% c("Lima", "Callao", "Ica", "Arequipa", "Moquegua", "Tacna", 
+                  "Tumbes", "Piura", "Lambayeque", "La Libertad") ~ "Costa",
+      DPTO %in% c("Loreto", "Ucayali", "Amazonas", "San Martín", "Madre de Dios") ~ "Selva",
+      TRUE ~ "Sierra"
+      ),
+    Region = factor(Region, levels = c("Costa", "Sierra", "Selva"))  # Factor de ordenación
+    )
+```
+
+# Ingreso y gasto per cápita
+
+##  {.sidebar}
+
+Este dashboard presenta una exploración de los Ingresos y Gastos per cápita por departamento en varios años post pandemia, evidenciando su recuperación paulatina. Para lograr ello, la data principal ha sido tratada previamente usando la base de datos Sumaria del INEI de los años en cuestión.
+
+```{r}
+# Widget 1: Seleccionar la variable del Eje X
+selectInput("variable_x",
+            "Seleccione:",
+            choices = c("Ingreso per cápita" = "ingreso_percapita", 
+                        "Gasto per cápita" = "gasto_percapita"),
+            selected = "ingreso_percapita")
+
+# Widget 2: Seleccionar el año
+selectInput("anio",
+            "Seleccione el año:",
+            choices = sort(unique(sumaria202x$AÑO)),
+            selected = "2024")
+```
+
+## Espacio para output 1
+
+```{r}
+#| title: Ingreso y Gasto per cápita por departamento (soles)
+plotlyOutput("plot1")
+```
+
+# Data
+
+```{r}
+tableOutput('tabla_xpc')
+```
+
+```{r}
+#| context: server
+
+# 1. Renderizar el gráfico 1
+output$plot1 <- renderPlotly({
+  req(input$anio, input$variable_x)
+  
+  # Filtrar datos
+  df <- sumaria202x |>
+    filter(AÑO == input$anio)
+  
+  # Crear el gráfico
+  variable_seleccionada <- input$variable_x
+  
+  # Crear el gráfico directamente con plotly (sin ggplot)
+  df_ordenado <- df |>
+    arrange(!!sym(input$variable_x)) |>
+    mutate(DPTO = factor(DPTO, levels = DPTO))
+  
+  plot_ly(df_ordenado,
+          y = ~DPTO,
+          x = as.formula(paste0("~", input$variable_x)),
+          type = "bar",
+          orientation = "h",
+          color = ~Region,
+          colors = c("Costa" = "#FFD700", "Sierra" = "#A0522D", "Selva" = "#2ECC71"),
+          hovertemplate = paste0("<b>%{y}</b><br>",
+                                 ifelse(input$variable_x == "ingreso_percapita",
+                                        "Ingreso: ", "Gasto: "),
+                                 "%{x:.0f} soles<extra></extra>")) |>
+    layout(
+      xaxis = list(title = ifelse(input$variable_x == "ingreso_percapita",
+                                   "Ingreso per cápita (soles)",
+                                   "Gasto per cápita (soles)")),
+      yaxis = list(title = "Departamento"),
+      showlegend = TRUE,
+      legend = list(title = list(text = "Región")),
+      margin = list(l = 100)
+    )
+})
+
+
+# 2. Renderizar la tabla
+output$tabla_xpc <- renderTable({
+  req(input$anio)
+  
+  sumaria202x |>
+    filter(AÑO == input$anio) |>
+    mutate(
+      AÑO = as.integer(AÑO),
+      ingreso_percapita = as.integer(round(ingreso_percapita, 0)),  # Número entero
+      gasto_percapita = as.integer(round(gasto_percapita, 0))       # Número entero
+    ) |>
+    arrange(desc(ingreso_percapita))
+})
+```
