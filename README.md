@@ -2,14 +2,14 @@
 
 Este proyecto presenta un análisis exploratorio sobre la recuperación económica de los departamentos del Perú en el periodo post-pandemia. Utilizando microdatos de la **Encuesta Nacional de Hogares (ENAHO)**, se visualizan las tendencias de **Ingreso y Gasto per cápita** en un dashboard desplegado en Shinyapps:
 
-🚀 **[VER DASHBOARD INTERACTIVO:](https://ulisesrodas.shinyapps.io/XPC-2020-2024/)**
+🚀 **[VER DASHBOARD INTERACTIVO](https://ulisesrodas.shinyapps.io/XPC-2020-2024/)**
 
 ## 🔍 Principales Hallazgos
 Gracias a la visualización interactiva, se pudieron identificar patrones clave en la recuperación económica:
 
 * **Brecha sierra/selva:** Se evidencia una brecha persistente en departamentos de la Sierra y Selva (como **Puno**, **Loreto** y **Huancavelica**) vs la Costa, cuya recuperación post-pandemia ha sido más lenta en términos monetarios.
 * **Tendencia de recuperación:** Al comparar 2020 vs 2024, se observa un repunte generalizado en los ingresos nominales, aunque la capacidad de gasto muestra variaciones heterogéneas según la región.
-* * **Caso Madre de Dios:** Es llamativo que esté muy arriba en el ranking. Es un hallazgo interesante que puede estar ligado al auge de la  minería ilegal en la zona. Se necesita más investigación al respecto.
+* **Caso Madre de Dios:** Es llamativo que esté muy arriba en el ranking. Es un hallazgo interesante que puede estar ligado al auge de la  minería ilegal en la zona. Se necesita más investigación al respecto.
 
 <img width="1609" height="865" alt="image" src="https://github.com/user-attachments/assets/bdd7c566-bbfc-4208-b2b8-2a386cdf2d66" />
 
