@@ -1,4 +1,4 @@
-# Dashboard: Evolución económica departamenta del Perú (2020-2024)
+# Dashboard: Ingresos y Gastos per cápita en Perú (2020-2024)
 
 Este proyecto presenta un análisis exploratorio sobre la recuperación económica de los departamentos del Perú en el periodo post-pandemia. Utilizando microdatos de la **Encuesta Nacional de Hogares (ENAHO)**, se visualizan las tendencias de **Ingreso y Gasto per cápita** en un dashboard desplegado en Shinyapps:
 
